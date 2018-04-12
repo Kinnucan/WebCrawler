@@ -37,7 +37,7 @@ Fork and clone the repository. Then explore the following files in the spider pa
 | Class | Description |
 |--- | --- |
 | AllUrlsCounter.java    | contains a ‘dictionary’ to hold counts of how often a URL is encounterd |
-| HttpHelper.java         | contains methods to read html pages and extract links; also can detect whether a URL is an image |
+| HttpHelper.java         | contains methods to read html pages and extract links |
 | RunSpider.java          | has main() |
 | Spider.java             | the workhorse and the one you will be changing |
 | TestHttpHelper.java     | JUnit test class |

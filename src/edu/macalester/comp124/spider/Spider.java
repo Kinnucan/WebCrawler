@@ -61,8 +61,8 @@ public class Spider {
 
 		while(finished.size() < maxUrls) {
 			// TODO: While there is remaining work and we haven't
-			// reach the maximum # of finished urls, process
-			// the next url, if it is unfinished.  After processing, mark
+			// reached the maximum # of finished urls, process
+			// the next unfinshed url.  After processing, mark
 			// it as finished.
 		}
 	}
@@ -73,16 +73,13 @@ public class Spider {
 	 * @param url   theURL for the web page
 	 */
 	public void processPage(String url) {
-        // Extract all the links from the url
-        for (String link : helper.extractLinks(url)) {
-                // TODO: Your work goes here
-                // For each link that isn't an image, increment the
-                // count for the link and queue up the link as 'work'
-                // for future scraping if you haven't already finished processing it.
-                // HINT: Take a look at the AllUrlCounter class
+		// TODO: extract all the links from the url
+		// For each link increment the
+		// count for the link and queue up the link for future scraping if it has not already been finished.
+		// HINT: Take a look at the helper class
 
 
-        }
+
 	}
 	
 	/**

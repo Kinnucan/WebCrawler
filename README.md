@@ -26,9 +26,9 @@ directed by Professor Libby Shoop.  You will first write the single program craw
 running spider programs called threads, can improve the workload that can be completed.
 
 In the first week of this lab, you should complete the sequential, or single version of the Spider, in the package called
-spider (Described in Part 0 below).
+`spider` (part 1 below).
 
-In the following lab, you will complete the version in the package called concurrentSpider (Part 1 below).
+In the following lab, you will complete the version in the package called `concurrentSpider` (part 2 below).
 
 ## Part 1 (week 1)
 

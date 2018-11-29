@@ -17,14 +17,15 @@ public class TestSpider  {
 	public void testProcessPage() {
 		Spider spider = new Spider(10);
 		spider.processPage(BEGINNING_URL);
-		
+
 		assertTrue(spider.getWork().size() > 6);
-		
+
 		int i = 0;
 		for (UrlCount urlCount : spider.getUrlCounts()) {
 			i += urlCount.getCount();
 		}
 		assertTrue(i >= 10);
+
 	}
 
     @Test

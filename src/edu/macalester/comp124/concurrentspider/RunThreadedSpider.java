@@ -23,8 +23,12 @@ public class RunThreadedSpider {
 	 * @param args
 	 */
 	public static void main(String [] args) {
+		long start = System.currentTimeMillis();
 		ConcurrentAllUrlsCounter urlCounts = runSpider(NUM_THREADS);
 		printURLCounts(urlCounts);
+		long end = System.currentTimeMillis();
+		double time = (double)(end - start);
+		System.out.println(time);
 	}
 
 	/**

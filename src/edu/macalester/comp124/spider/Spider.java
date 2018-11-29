@@ -57,13 +57,14 @@ public class Spider {
 	 */
 	public void crawl(String beginningUrl) {
         // TODO: add the first URL to be scraped to the work queue
-
+        work.add(beginningUrl);
 
 		while(finished.size() < maxUrls) {
 			// TODO: While there is remaining work and we haven't
 			// reached the maximum # of finished urls, process
 			// the next unfinshed url.  After processing, mark
 			// it as finished.
+            processPage(work.remove());
 		}
 	}
 	
@@ -78,8 +79,14 @@ public class Spider {
 		// count for the link and queue up the link for future scraping if it has not already been finished.
 		// HINT: Take a look at the helper class
 
-
-
+		List<String> links = helper.extractLinks(url);
+		finished.add(url);
+		for(String str : links){
+            urlCounter.countUrl(url);
+			if(!finished.contains(str)){
+				work.add(str);
+			}
+		}
 	}
 	
 	/**

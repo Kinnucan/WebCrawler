@@ -85,9 +85,9 @@ Using the `getDifference` method you just wrote, how many new urls were encounte
 
     | maxurls | Size of finished list | Number of new urls found | Size of remaining work queue |
     |--- | --- | --- | --- |
-    | 10 | | | |
-    | 20 | | | |
-    | 30 | | | |
+    | 10 |  | | |
+    | 20 |  | | |
+    | 30 |  | | |
     
 5. Experiment with the BEGNNING_URL variable found in RunSpider by choosing some other pages of interest to you as starting points.
 
@@ -174,14 +174,14 @@ variable in the RunThreadedSpider class.
     
     | Number of Threads | Speedup (non-threaded time / threaded time)|
     | --- | --- |
-    | 1 |  |
-    | 2 |  |
-    | 3 |  |
-    | 4 |  |
-    | 5 |  |
-    | 6 |  |
-    | 7 |  |
-    | 8 |  | 
+    | 1 | 7491.0/13,372.0 |
+    | 2 | 3776.0/7446.0 |
+    | 3 | 4084.0/3902.0 |
+    | 4 | 4391.0/2979.0 |
+    | 5 | 5985.0/2559.0 |
+    | 6 | 5621.0/3048.0 |
+    | 7 | 4194.0/3010.0 |
+    | 8 | 4870.0/2857.0 | 
     
 
 

@@ -69,6 +69,11 @@ public class ConcurrentSpider implements Runnable {
             String url = null;
 
             //TODO: take the next url from the work queue and process the page if it has not already been finished. After processing, mark it as finished
+            url = sharedData.getWork().poll();
+            if(!sharedData.getFinished().contains(url)) {
+                processPage(url);
+            }
+            sharedData.getFinished().add(url);
 
             urlCount++;
         }
@@ -88,6 +93,14 @@ public class ConcurrentSpider implements Runnable {
             // count for the link and queue up the link for future scraping if it has not already been finished.
             // Hint: Remember that calling add or offer won't have the correct behavior we want with a blocking queue.
             // If the queue is full, we want it to wait until we can actually put the url into the queue.
+            sharedData.getUrlCounter().countUrl(url);
+            if(!sharedData.getFinished().contains(url2)){
+                try {
+                    sharedData.getWork().put(url2);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
